@@ -18,7 +18,10 @@ dependencies:
     version: 1.4.2
   langchain:
     specifier: ^0.0.95
-    version: 0.0.95(hnswlib-node@1.4.2)(redis@4.6.7)
+    version: 0.0.95(hnswlib-node@1.4.2)(playwright@1.35.1)(redis@4.6.7)
+  playwright:
+    specifier: ^1.35.1
+    version: 1.35.1
   redis:
     specifier: ^4.6.7
     version: 4.6.7
@@ -4565,7 +4568,7 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /langchain@0.0.95(hnswlib-node@1.4.2)(redis@4.6.7):
+  /langchain@0.0.95(hnswlib-node@1.4.2)(playwright@1.35.1)(redis@4.6.7):
     resolution: {integrity: sha512-UjOr1XArTTSZB4uCayKzQs69pCahHCq/CVTc66fAymCD5uKerh8AvcemPxgRpTi8tgcdhY76j//c0e06l5aFdA==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -4731,6 +4734,7 @@ packages:
       openai: 3.3.0
       p-queue: 6.6.2
       p-retry: 4.6.2
+      playwright: 1.35.1
       redis: 4.6.7
       uuid: 9.0.0
       yaml: 2.3.1
@@ -5375,6 +5379,21 @@ packages:
     dependencies:
       find-up: 4.1.0
     dev: true
+
+  /playwright-core@1.35.1:
+    resolution: {integrity: sha512-pNXb6CQ7OqmGDRspEjlxE49w+4YtR6a3X6mT1hZXeJHWmsEz7SunmvZeiG/+y1yyMZdHnnn73WKYdtV1er0Xyg==}
+    engines: {node: '>=16'}
+    hasBin: true
+    dev: false
+
+  /playwright@1.35.1:
+    resolution: {integrity: sha512-NbwBeGJLu5m7VGM0+xtlmLAH9VUfWwYOhUi/lSEDyGg46r1CA9RWlvoc5yywxR9AzQb0mOCm7bWtOXV7/w43ZA==}
+    engines: {node: '>=16'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      playwright-core: 1.35.1
+    dev: false
 
   /pluralize@8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
